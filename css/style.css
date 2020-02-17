@@ -225,14 +225,14 @@ body {
     display: none;
 }
 
-.left-wrapper > ul ul.show-menu {
+.left-wrapper > ul li.show-menu ul {
     display: block;
     padding-left: 0px;
     margin-left: -15px;
     margin-top: 15px;
 }
 
-.left-wrapper > ul ul.show-menu li {
+.left-wrapper > ul li.show-menu ul li {
     height: 100%;
     margin-bottom: 0;
     padding: 10px 15px;
@@ -240,11 +240,11 @@ body {
     transition: var(--transition);
 }
 
-.left-wrapper > ul ul.show-menu li:hover {
+.left-wrapper > ul li.show-menu ul li:hover {
     background-color: rgb(1, 59, 153);
 }
 
-.left-wrapper > ul ul.show-menu li span {
+.left-wrapper > ul li.show-menu ul li span {
     position: relative;
 }
 
@@ -1033,7 +1033,7 @@ body {
     transform: rotateY(180deg);
 }
 
-.js-collapse .left-wrapper > ul ul.show-menu {
+.js-collapse .left-wrapper > ul li.show-menu ul {
     left: 100%;
     position: absolute;
     top: 0;
@@ -1042,16 +1042,17 @@ body {
     padding-left: 0;
     margin-top: 0;
     margin-left: 0px;
+    z-index: 9999;
 }
 
-.js-collapse .left-wrapper > ul ul.show-menu li {
+.js-collapse .left-wrapper > ul li.show-menu ul li {
     position: static;
     height: 100%;
     padding: 7px 15px;
     margin-bottom: 0;
 }
 
-.js-collapse .left-wrapper > ul ul.show-menu li span {
+.js-collapse .left-wrapper > ul li.show-menu ul li span {
     position: relative;
     left: 0;
 }

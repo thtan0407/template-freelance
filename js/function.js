@@ -1,15 +1,5 @@
 var windowWidth = $(window).width();
 $(document).ready(function () {
-    $(document).on('click', '.left-wrapper > ul > li', function () {
-        windowWidth > 991 && ($(this).parents().find('ul.show-menu').removeClass('show-menu'),
-            $(this).find('ul').toggleClass('show-menu'))
-    })
-
-    $(document).on("mouseup touchstart", function (e) {
-        var o = $("ul.show-menu");
-        o.is(e.target) || 0 !== o.has(e.target).length || ($("ul.show-menu").removeClass("show-menu"))
-    });
-
     $(document).on('click', '.collapse-navbar a', function () {
         $(this).parents('.home-wrapper').toggleClass('js-collapse');
     })
@@ -64,13 +54,16 @@ $(document).ready(function () {
             $(".left-wrapper").removeClass("overlay"))
     });
 
-    $(document).on("click", '.left-wrapper > ul.menu_mobile > li > a', function() {
-        windowWidth < 992 && (
-            console.log($(this).parent().text()),
-            $(this).parents().find('ul.show-menu').removeClass('show-menu'),
-            $(this).parent().find('ul').addClass('show-menu')
-        )
+    $(document).on('click', '.left-wrapper > ul > li', function () {
+        console.log($(this).text());
+        $(this).parent().find('.show-menu').removeClass('show-menu');
+        $(this).addClass('show-menu');
     })
+
+    $(document).on("mouseup", function (e) {
+        var o = $("li.show-menu");
+        o.is(e.target) || 0 !== o.has(e.target).length || (o.removeClass("show-menu"))
+    });
 });
 
 $(document).on('click', '.main-transaction .btn-submit', function () {
