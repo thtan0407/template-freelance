@@ -268,8 +268,13 @@ body {
     position: relative;
 }
 
-.left-wrapper ul li a {
-    color: #d9d9d9;
+.left-wrapper > ul > li > a {
+    color: #e6f7fc;
+    text-decoration: none;
+}
+
+.left-wrapper > ul > li > ul > li > a {
+    color: #5bd7fc;
     text-decoration: none;
 }
 
@@ -283,7 +288,7 @@ body {
 
 .left-wrapper ul li.active > a,
 .left-wrapper ul li:hover > a{
-    color: #fff;
+    color: #fff !important;
 }
 
 .left-wrapper ul li a svg {
