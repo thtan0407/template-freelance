@@ -70,6 +70,7 @@ $(document).on('click', '.main-transaction .btn-submit', function () {
     var data = $(this).parents().find('#amountusd').val();
     if (data == '') {
         $(this).parents().find('.error-data').show();
+        return false;
     } else {
         $(this).parents().find('.error-data').hide();
         $(this).parents().find('.form-item').removeClass('hidden-form');

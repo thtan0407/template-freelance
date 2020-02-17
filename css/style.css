@@ -159,6 +159,32 @@ body {
     text-decoration: none;
 }
 
+.main-regiser-home {
+    overflow: unset;
+    height: 100%;
+}
+
+.main-regiser-home .main--login {
+    position: relative;
+    top: unset;
+    transform: translateY(0);
+}
+
+@media screen and (min-width: 1199px) {
+    .main--login .main-register .container .row > .col-lg-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.main--login .main-register {
+    width: 100%;
+}
+
+.main--login .main-register .form-title {
+    padding-left: 15px;
+}
+
 .home-header {
     background: #fff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
@@ -615,24 +641,23 @@ body {
 }
 
 .package-action {
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
     text-align: center;
 }
 
 .package-action a {
-    padding: 6px 18px;
-    background: var(--main-color);
-    display: inline-block;
+    padding: 10px 18px;
+    background: var(--main-color-2);
+    display: block;
     color: #fff;
     text-decoration: none;
-    border-radius: 25px;
     font-size: .9rem;
     transition: var(--transition);
     text-transform: uppercase;
 }
 
 .package-action a:hover {
-    background-color: rgb(1, 59, 153);
+    background-color: rgb(0, 145, 222);
 }
 
 /*
@@ -1091,7 +1116,7 @@ body {
     color: #fff;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 1px rgba(0, 0, 0, 0.23);
     position: absolute;
-    background: rgba(255,0,0,.6);
+    background: rgba(255, 0, 0, .6);
     top: 85px;
     right: 15px;
     z-index: 9999;
@@ -1237,6 +1262,9 @@ body {
         font-size: .9rem;
         color: #555
     }
+    .main-regiser-home:after {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1299,6 +1327,7 @@ body {
     .home-actions {
         justify-content: center !important;
     }
+
     .home-header {
         padding: 15px
     }
@@ -1428,7 +1457,7 @@ body {
     #form-register,
     .main-event .container,
     .main-sale .col-lg-12,
-    .main-member .col-lg-12{
+    .main-member .col-lg-12 {
         padding: 0;
     }
 
@@ -1492,7 +1521,7 @@ body {
     }
 
     .total-table table th,
-    .total-table table td{
+    .total-table table td {
         font-size: .9rem;
     }
 
@@ -1509,7 +1538,7 @@ body {
         color: #fff;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 1px rgba(0, 0, 0, 0.23);
         position: absolute;
-        background: rgba(255,0,0,.6);
+        background: rgba(255, 0, 0, .6);
         top: 100px;
         right: 10px;
         z-index: 9999;

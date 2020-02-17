@@ -192,10 +192,23 @@
                                             <label class="font-bold"for="sponsor">Sponsor username</label>
                                             <input type="text" class="form-control" id="sponsor">
                                         </div>
+                                        <div class="form-group col-md-6">
+                                            <label class="font-bold"for="package">Select package</label>
+                                            <select class="custom-select" id="package">
+                                                <option selected value="bot">BOT1000 - 1,000</option>
+                                                <option value="founder">Founder - 10,000</option>
+                                                <option value="goldfounder">Gold Founder - 25,000</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="form-group col-md-12" style="font-size: .9rem">
-                                            Already have an account? <a href="login.html" style="text-decoration: none;font-size: .9rem">Login</a>
+                                        <div class="form-group col-md-6">
+                                            <label class="font-bold"for="registerwallet">Wallet</label>
+                                            <select class="custom-select" id="registerwallet">
+                                                <option selected value="balance">Balance - $0</option>
+                                                <option value="balance1">Balance - $10,000</option>
+                                                <option value="balance2">Balance Founder - $35,000</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-submit">Register</button>
