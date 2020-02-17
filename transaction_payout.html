@@ -27,8 +27,9 @@
             <a href="home.html" title="Logo">
                 <img src="images/logo.png" title="Logo" alt="Logo">
             </a>
+            <div class="humburger"><span></span></div>
         </div>
-        <div class="home-actions d-md-flex align-items-center justify-content-end">
+        <div class="home-actions d-flex align-items-center justify-content-end">
             <div class="home-language">
                 <a href="javascript:void(0)">Language <i class="fal fa-globe"></i></a>
             </div>
@@ -86,9 +87,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javscript:void(0)" title="My waller">
+                    <a href="javscript:void(0)" title="My wallet">
                         <i class="fal fa-wallet"></i>
-                        <span>My waller</span>
+                        <span>My wallet</span>
                         <i class="fal fa-chevron-right"></i>
                     </a>
                     <ul>
@@ -173,14 +174,14 @@
                                                     <div class="form-row">
                                                         <div class="form-group col-md-12">
                                                             <label class="font-bold" for="walletaddress">Wallet
-                                                                dddress</label>
+                                                                Address</label>
                                                             <input type="text" class="form-control" id="walletaddress">
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="form-group col-md-12">
                                                             <label class="font-bold" for="amountusd">Amount USD</label>
-                                                            <input type="text" class="form-control" id="amountusd">
+                                                            <input type="number" class="form-control" id="amountusd">
                                                             <span>Fee 5%</span>
                                                         </div>
                                                     </div>
@@ -188,12 +189,12 @@
                                                         <div class="form-group col-md-6">
                                                             <label class="font-bold" for="bitcoinprice">Bitcoin
                                                                 price</label>
-                                                            <input type="text" class="form-control" value="101144.242"
+                                                            <input disabled type="text" class="form-control" value="101144.242"
                                                                    id="bitcoinprice">
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label class="font-bold" for="estimated">Estimated</label>
-                                                            <input type="text" value="0" class="form-control"
+                                                            <input disabled type="text" value="0" class="form-control"
                                                                    id="estimated">
                                                         </div>
                                                     </div>
@@ -223,8 +224,8 @@
                                         <tr>
                                             <th scope="col">Time</th>
                                             <th scope="col">Amount (BTC)</th>
-                                            <th scope="col">Member</th>
-                                            <th scope="col">Member incurred</th>
+                                            <th scope="col">Amount (USD)</th>
+                                            <th scope="col">Status</th>
                                         </tr>
                                         </thead>
                                         <tbody>

@@ -18,10 +18,10 @@
     <script src="fonts/fontawesome-5/js/all.min.js"></script>
     <script src="js/function.js"></script>
 
-    <title>Login</title>
+    <title>2FA Login</title>
 </head>
 <body>
-<div class="main-login">
+<div class="main-login main-2fa">
     <div class="main--login">
         <div class="login-left">
             <img src="images/logo.png">
@@ -32,22 +32,10 @@
                     <h2>Login</h2>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="username" placeholder="Username">
+                    <input type="text" class="form-control" id="passcode" placeholder="2FA passcode">
                     <i class="fas fa-user"></i>
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-                    <i class="fas fa-lock-alt"></i>
-                </div>
-                <button type="submit" class="btn btn-login">Login</button>
-                <div class="form-bottom text-center">
-                    <div class="link--login">
-                        <a href="forgot.html">Forgot Your Password?</a>
-                    </div>
-                    <div class="link--login">
-                        <a href="register.html">Register</a>
-                    </div>
-                </div>
+                <button type="submit" class="btn btn-login">Verify 2FA</button>
             </form>
         </div>
     </div>

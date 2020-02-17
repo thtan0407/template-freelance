@@ -34,6 +34,10 @@ body {
     background: url('../images/bg-login.png') center center no-repeat;
 }
 
+.main-2fa form {
+    padding: 30px 0 50px;
+}
+
 .main-login:after {
     position: absolute;
     content: "";
@@ -258,6 +262,7 @@ body {
     position: absolute;
     transition: var(--transition);
     left: 30px;
+    text-transform: capitalize;
 }
 
 .left-wrapper ul li.active > a {
@@ -385,10 +390,12 @@ body {
     color: #a1a1a1;
 }
 
-.dashboard-icon-small {
+.dashboard-icon-small a {
     font-size: .9rem;
-    color: #999
+    color: #999;
+    text-decoration: none;
 }
+
 
 .dashboard-item .dashboard-item--right {
     width: 75%;
@@ -664,9 +671,11 @@ body {
 }
 
 #form-register label.font-bold,
-.form-item label.font-bold {
+.form-item label.font-bold,
+.transferModal label {
     color: #444;
     font-size: .9rem;
+    text-transform: capitalize;
 }
 
 #form-register input,
@@ -714,6 +723,7 @@ body {
 #form-qr img {
     margin: 0 auto;
     display: block;
+    max-width: 60%;
 }
 
 #form-qr span {
@@ -744,10 +754,15 @@ body {
     font-size: 1.2rem;
 }
 
+.total-table {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 1px rgba(0, 0, 0, 0.23);
+    border-radius: 15px;
+}
+
 .total-table table {
-    border-radius: 20px;
     background-color: #fff;
     overflow: hidden;
+    margin-bottom: 0;
 }
 
 .total-table table th {
@@ -819,6 +834,7 @@ body {
 
 .member-usecase {
     padding: 30px;
+    overflow: auto;
 }
 
 .member-usecase > ul {
@@ -1038,4 +1054,461 @@ body {
 .js-collapse .left-wrapper > ul ul.show-menu li span {
     position: relative;
     left: 0;
+}
+
+
+.packageModal .btn-light {
+    border: 1px solid #d9d9d9
+}
+
+.hidden-form {
+    display: none;
+}
+
+.qr-check {
+    padding: 15px
+}
+
+.qr-check form {
+    padding: 10px 0
+}
+
+.qr-check p {
+    text-align: center;
+}
+
+.waiting-load img {
+    height: 23px;
+    width: 23px;
+    margin-left: 10px;
+    display: inline-block !important;
+    vertical-align: middle;
+}
+
+.error-data {
+    padding: 15px 30px;
+    color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 1px rgba(0, 0, 0, 0.23);
+    position: absolute;
+    background: rgba(255,0,0,.6);
+    top: 85px;
+    right: 15px;
+    z-index: 9999;
+    border-radius: 4px;
+    display: none;
+}
+
+.error-data svg {
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 991px) {
+    .home-logo {
+        position: relative;
+    }
+
+    .humburger {
+        position: absolute;
+        top: 50%;
+        right: -2%;
+        display: block;
+        width: 22px;
+        height: 15px;
+        cursor: pointer;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+
+    .humburger:before {
+        top: 0
+    }
+
+    .humburger:after {
+        bottom: 0
+    }
+
+    .humburger:before, .humburger:after, .humburger span {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 22px;
+        border-radius: 1px;
+        background: #555;
+        transition: all .4s
+    }
+
+    .humburger span {
+        position: absolute;
+        top: 50%;
+        margin-top: -1px
+    }
+
+    .humburger.active_humburger span {
+        opacity: 0
+    }
+
+    .humburger.active_humburger:before {
+        top: 50%;
+        margin-top: -1px;
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+
+    .humburger.active_humburger:after {
+        bottom: 50%;
+        margin-bottom: -1px;
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+
+    .left-wrapper {
+        width: 0;
+    }
+
+    .left-wrapper:before {
+        cursor: pointer;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+        background: transparent;
+        transition: all .5s;
+    }
+
+    .left-wrapper.overlay:before {
+        visibility: visible;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .left-wrapper > ul {
+        position: fixed;
+        top: 0;
+        left: -110%;
+        overflow-y: auto;
+        z-index: 1000100;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        width: 85%;
+        height: 100vh;
+        max-width: 480px;
+        background: var(--main-color-2);
+        border-bottom: none;
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.51);
+        transition: all .5s;
+        padding-top: 15px
+    }
+
+    .left-wrapper > ul.menu_mobile {
+        left: 0;
+    }
+
+    .collapse-navbar {
+        display: none;
+    }
+
+    .right-wrapper {
+        width: 100%;
+        padding: 15px
+    }
+
+    .right--banner img {
+        height: 100%;
+    }
+
+    .event-single-title h1 {
+        font-size: 1.1rem;
+    }
+
+    .event-single-content p {
+        font-size: .9rem;
+        color: #555
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .main--login .login-left img {
+        height: 3rem;
+    }
+
+    .main--login .login-right {
+        padding: 0 30px;
+    }
+
+    .main-dashboard .container {
+        padding: 0;
+    }
+
+    .main-dashboard .col-md-6 {
+        margin-bottom: 30px;
+    }
+
+    .main-dashboard .dashboard-item {
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .dashboard-item .dashboard-item--left {
+        width: 30%;
+    }
+
+    .dashboard-item .dashboard-item--left .dashboard-icon {
+        font-size: 2.4rem;
+    }
+
+    .dashboard-item .dashboard-item--right {
+        width: 70%
+    }
+
+    .dashboard-item--right .dashboard-title {
+        font-size: 1rem;
+    }
+
+    .dashboard-item--right .dashboard-number {
+        font-size: 1.6rem;
+    }
+
+    .referral-link-main {
+        width: 100%
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .form-item {
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .home-header {
+        padding: 15px
+    }
+
+    .home-actions div,
+    .home-actions div a {
+        font-size: .8rem;
+    }
+
+    .home-actions {
+        margin-top: 10px;
+    }
+
+    .main--login {
+        display: block;
+        width: 80%;
+        left: 10%
+    }
+
+    .main--login .login-left,
+    .main--login .login-right {
+        width: 100%;
+    }
+
+    .main--login .login-right {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        padding: 0 15px;
+    }
+
+    .main--login .login-left {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .main--login .login-left img {
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: translateY(0);
+        height: 2rem;
+    }
+
+    .main--login .login-right .form-group svg,
+    .main--login .login-right .btn-login {
+        font-size: 1rem;
+    }
+
+    .main--login .login-right .form-group input::placeholder,
+    .main--login .login-right .form-group input {
+        font-size: .9rem;
+    }
+
+    .main-title {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .main-title:after {
+        top: -12px;
+        right: -28px;
+    }
+
+    .home-logo img {
+        height: 2rem;
+    }
+
+    .main-dashboard .col-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main-dashboard .dashboard-item {
+        margin-bottom: 20px;
+    }
+
+    .dashboard-item .dashboard-item--left {
+        width: 30%;
+    }
+
+    .dashboard-item .dashboard-item--left .dashboard-icon {
+        font-size: 2.4rem;
+    }
+
+    .dashboard-item .dashboard-item--right {
+        width: 70%
+    }
+
+    .dashboard-item--right .dashboard-title {
+        font-size: .8rem;
+    }
+
+    .dashboard-item--right .dashboard-number {
+        font-size: 1.4rem;
+    }
+
+    .referral-link {
+        margin-top: 0;
+    }
+
+    .referral-link-main {
+        width: 100%;
+        text-align: center;
+    }
+
+    .referral-link .referral-link-main div {
+        width: 100% !important;
+        text-align: center;
+        margin: 10px 0px !important;
+    }
+
+    .referral-link .referral-link-main div:last-child {
+        width: 50% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .main-register .col-lg-12:first-child,
+    .main-manage .col-md-6:last-child,
+    .main-manage .col-lg-12,
+    .main-package .col-md-4,
+    .main-transaction .col-lg-8,
+    .main-transaction .col-lg-4,
+    .main-transaction .col-lg-12:last-child,
+    #form-register,
+    .main-event .container,
+    .main-sale .col-lg-12,
+    .main-member .col-lg-12{
+        padding: 0;
+    }
+
+    .package-item {
+        margin-bottom: 15px;
+    }
+
+    .package-title .package-title-top {
+        font-size: 1rem;
+    }
+
+    .package-title .package-title-bottom {
+        font-size: 1.3rem;
+    }
+
+    .package-title {
+        padding: 5px 0;
+    }
+
+    .package-image img {
+        max-width: 50%;
+    }
+
+    .package-action a {
+        font-size: .8rem;
+    }
+
+    .main-event {
+        padding: 15px;
+    }
+
+    .event-item {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .event-item .event-image {
+        width: 40%;
+    }
+
+    .event-item .event-content {
+        width: 58%
+    }
+
+    .event-item .event-image a img {
+        height: 80px;
+    }
+
+    .event-item .event-content .event-title a h3 {
+        font-size: 1rem;
+    }
+
+    .event-item .event-content .event-action a {
+        padding: 4px 10px;
+        font-size: .8rem;
+        margin-top: 5px;
+    }
+
+    .transaction-icon {
+        display: none;
+    }
+
+    .total-table table th,
+    .total-table table td{
+        font-size: .9rem;
+    }
+
+    .total-table .table {
+        min-width: 600px;
+    }
+
+    .qr-check span {
+        font-size: .8rem !important;
+    }
+
+    .error-data {
+        padding: 10px 20px;
+        color: #fff;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 1px rgba(0, 0, 0, 0.23);
+        position: absolute;
+        background: rgba(255,0,0,.6);
+        top: 100px;
+        right: 10px;
+        z-index: 9999;
+        border-radius: 4px;
+        display: none;
+        font-size: .9rem;
+    }
+
+    .error-data svg {
+        font-size: 1.3rem;
+    }
 }
