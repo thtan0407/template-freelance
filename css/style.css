@@ -1122,7 +1122,8 @@ body {
         height: 15px;
         cursor: pointer;
         -ms-transform: translateY(-50%);
-        transform: translateY(-50%)
+        transform: translateY(-50%);
+        z-index: 999;
     }
 
     .humburger:before {
