@@ -256,7 +256,7 @@ body {
 }
 
 .left-wrapper > ul li.show-menu ul li:hover {
-    background-color: rgb(1, 59, 153);
+    /*background-color: rgb(1, 59, 153);*/
 }
 
 .left-wrapper > ul li.show-menu ul li span {
@@ -269,7 +269,7 @@ body {
 }
 
 .left-wrapper ul li a {
-    color: #f0f0f0;
+    color: #d9d9d9;
     text-decoration: none;
 }
 
