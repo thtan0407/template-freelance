@@ -1107,10 +1107,15 @@ body {
         position: relative;
     }
 
+    .home-logo a {
+        display: block;
+        margin-left: 45px;
+    }
+
     .humburger {
         position: absolute;
         top: 50%;
-        right: -2%;
+        left: 10px;
         display: block;
         width: 22px;
         height: 15px;
@@ -1289,6 +1294,9 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    .home-actions {
+        justify-content: center !important;
+    }
     .home-header {
         padding: 15px
     }
@@ -1511,4 +1519,11 @@ body {
     .error-data svg {
         font-size: 1.3rem;
     }
+
+    .home-logo a {
+        display: block;
+        text-align: center;
+        margin-left: 0;
+    }
+
 }

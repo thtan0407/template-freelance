@@ -1,7 +1,8 @@
+var windowWidth = $(window).width();
 $(document).ready(function () {
     $(document).on('click', '.left-wrapper > ul > li', function () {
-        $(this).parents().find('ul.show-menu').removeClass('show-menu');
-        $(this).find('ul').toggleClass('show-menu');
+        windowWidth > 991 && ($(this).parents().find('ul.show-menu').removeClass('show-menu'),
+            $(this).find('ul').toggleClass('show-menu'))
     })
 
     $(document).on("mouseup touchstart", function (e) {
@@ -47,13 +48,12 @@ function clipBoard() {
 }
 
 
-var windowWidth = $(window).width();
 $(document).ready(function () {
     $(".humburger").on("click", function () {
         windowWidth < 992 && (
             $(".humburger").toggleClass("active_humburger"),
-            $('.left-wrapper').toggleClass('overlay'),
-            $('.left-wrapper > ul').toggleClass('menu_mobile')
+                $('.left-wrapper').toggleClass('overlay'),
+                $('.left-wrapper > ul').toggleClass('menu_mobile')
         )
     })
 
@@ -63,6 +63,14 @@ $(document).ready(function () {
             $(".humburger").removeClass("active_humburger"),
             $(".left-wrapper").removeClass("overlay"))
     });
+
+    $(document).on("click", '.left-wrapper > ul.menu_mobile > li > a', function() {
+        windowWidth < 992 && (
+            console.log($(this).parent().text()),
+            $(this).parents().find('ul.show-menu').removeClass('show-menu'),
+            $(this).parent().find('ul').addClass('show-menu')
+        )
+    })
 });
 
 $(document).on('click', '.main-transaction .btn-submit', function () {
