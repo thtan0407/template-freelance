@@ -60,10 +60,10 @@ $(document).ready(function () {
         $(this).addClass('show-menu');
     })
 
-    $(document).on("mouseup", function (e) {
-        var o = $("li.show-menu");
-        o.is(e.target) || 0 !== o.has(e.target).length || (o.removeClass("show-menu"))
-    });
+    // $(document).on("mouseup", function (e) {
+    //     var o = $("li.show-menu");
+    //     o.is(e.target) || 0 !== o.has(e.target).length || (o.removeClass("show-menu"))
+    // });
 });
 
 $(document).on('click', '.main-transaction .btn-submit', function () {
@@ -75,5 +75,6 @@ $(document).on('click', '.main-transaction .btn-submit', function () {
         $(this).parents().find('.error-data').hide();
         $(this).parents().find('.form-item').removeClass('hidden-form');
         $(this).parents().find('.transaction-icon').addClass('hidden-form');
+        return false;
     }
 })

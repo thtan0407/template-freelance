@@ -159,17 +159,6 @@ body {
     text-decoration: none;
 }
 
-.main-regiser-home {
-    overflow: unset;
-    height: 100%;
-}
-
-.main-regiser-home .main--login {
-    position: relative;
-    top: unset;
-    transform: translateY(0);
-}
-
 @media screen and (min-width: 1199px) {
     .main--login .main-register .container .row > .col-lg-12 {
         padding-left: 0;
@@ -291,7 +280,9 @@ body {
     text-transform: capitalize;
 }
 
-.left-wrapper ul li.active > a {
+
+.left-wrapper ul li.active > a,
+.left-wrapper ul li:hover > a{
     color: #fff;
 }
 
@@ -1128,6 +1119,11 @@ body {
     font-size: 1.6rem;
 }
 
+#packageModal .modal-button,
+#transferModal .modal-button {
+    border-radius: .25rem !important;
+}
+
 @media screen and (max-width: 991px) {
     .home-logo {
         position: relative;
@@ -1264,6 +1260,17 @@ body {
     }
     .main-regiser-home:after {
         display: none;
+    }
+
+    .main-regiser-home {
+        overflow: unset;
+        height: 100%;
+    }
+
+    .main-regiser-home .main--login {
+        position: relative;
+        top: unset;
+        transform: translateY(0);
     }
 }
 
